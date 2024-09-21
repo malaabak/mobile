@@ -1,3 +1,26 @@
 {
-  "extends": "@react-native/typescript-config/tsconfig.json"
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "dependencies": {
+    "react-native-vector-icons": {
+      "platforms": {
+        "ios": null
+      }
+    }
+  },
+  "project": {
+    "ios": {},
+    "android": {}
+  },
+  "assets": ["./resources/fonts"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@resources/*": ["resources/*"],
+      "@components/*": ["src/presentation/common/components/*"],
+      "@domain/*": ["src/domain/*"],
+      "@presentation/*": ["src/presentation/*"],
+      "@data/*": ["./src/data/*"]
+    }
+  }
 }
+
